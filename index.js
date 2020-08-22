@@ -16,7 +16,7 @@ app.post('/', (req, res) => {
   const uid = req.body.uid;
   console.log(`Received uid ${uid}.`);
 
-  admin.auth().createCustomToken(uid)
+  admin.auth().createCustomToken(`${uid}`)
     .then(function(customToken) {
       res.send(customToken);
     })
