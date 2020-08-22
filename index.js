@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
     })
     .catch(function(error) {
       console.log(`Error storing uid ${uid}.`, error);
-      res.send(`Error storing uid ${uid}.`);
+      next(error);
     });
 });
 
