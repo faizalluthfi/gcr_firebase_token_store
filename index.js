@@ -18,7 +18,7 @@ app.post('/', (req, res) => {
 
   admin.auth().createCustomToken(uid)
     .then(function(customToken) {
-      res.send(uid);
+      res.send(customToken);
     })
     .catch(function(error) {
       console.log(`Error storing token ${uid}.`, error);
