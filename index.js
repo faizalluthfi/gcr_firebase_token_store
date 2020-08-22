@@ -10,7 +10,6 @@ app.post('/', (req, res) => {
 
   admin.initializeApp({
     credential: admin.credential.applicationDefault(),
-    databaseURL: 'https://<DATABASE_NAME>.firebaseio.com'
   });
 
   admin.auth().createCustomToken(token)
