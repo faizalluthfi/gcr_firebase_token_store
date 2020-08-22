@@ -15,16 +15,16 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   console.log(req.body);
-  const token = req.body.token;
-  console.log(`Received token ${token}.`);
+  const uid = req.body.uid;
+  console.log(`Received token ${uid}.`);
 
-  admin.auth().createCustomToken(token)
+  admin.auth().createCustomToken(uid)
     .then(function(customToken) {
-      res.send(token);
+      res.send(uid);
     })
     .catch(function(error) {
-      console.log(`Error storing token ${token}.`, error);
-      res.send(`Error storing token ${token}.`);
+      console.log(`Error storing token ${uid}.`, error);
+      res.send(`Error storing token ${uid}.`);
     });
 });
 
