@@ -1,0 +1,19 @@
+{
+  "name": "gcr_firebase_token_store",
+  "version": "0.0.1",
+  "description": "Google Cloud Run application to store firebase token",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://source.developers.google.com/p/plenary-glass-237912/r/gcr_firebase_token_store"
+  },
+  "keywords": [
+    "gcr",
+    "firebase"
+  ],
+  "author": "Faizal Luthfi <zalluth@gmail.com>",
+  "license": "ISC"
+}
