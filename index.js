@@ -1,8 +1,6 @@
 const admin = require('firebase-admin');
 
-admin.initializeApp({
-  serviceAccountId: 'pc-719@plenary-glass-237912.iam.gserviceaccount.com'
-});
+admin.initializeApp();
 
 const express = require('express');
 const app = express();
