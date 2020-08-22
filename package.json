@@ -17,6 +17,7 @@
   "author": "Faizal Luthfi <zalluth@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "firebase-admin": "^9.1.1"
   }
 }
