@@ -23,6 +23,7 @@ app.post('/', (req, res) => {
     })
     .catch(function(error) {
       console.log(`Error storing token ${token}.`, error);
+      res.send(`Error storing token ${token}.`);
     });
 });
 
