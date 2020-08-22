@@ -1,4 +1,3 @@
-var admin = require('firebase-admin');
 const express = require('express');
 const app = express();
 
@@ -11,6 +10,8 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const token = req.body.token;
   console.log(`Received token ${token}.`);
+
+  const admin = require('firebase-admin');
 
   admin.initializeApp({
     credential: admin.credential.applicationDefault(),
