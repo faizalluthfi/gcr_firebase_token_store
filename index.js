@@ -2,20 +2,18 @@ var admin = require('firebase-admin');
 const express = require('express');
 const app = express();
 
-admin.initializeApp({
-  credential: admin.credential.applicationDefault(),
-  databaseURL: 'https://<DATABASE_NAME>.firebaseio.com'
-});
-
 app.use(express.json());
 
 app.post('/', (req, res) => {
   const token = req.body.token;
   console.log(`Received token ${token}.`);
 
-  let uid = 'some-uid';
+  admin.initializeApp({
+    credential: admin.credential.applicationDefault(),
+    databaseURL: 'https://<DATABASE_NAME>.firebaseio.com'
+  });
 
-  admin.auth().createCustomToken(uid)
+  admin.auth().createCustomToken(token)
     .then(function(customToken) {
       res.send(token);
     })
