@@ -17,8 +17,8 @@ app.post('/', (req, res) => {
   console.log(`Received uid ${uid}.`);
 
   admin.auth().createCustomToken(`${uid}`)
-    .then(function(customToken) {
-      res.send(customToken);
+    .then(function(token) {
+      res.json({token});
     })
     .catch(function(error) {
       console.log(`Error storing uid ${uid}.`, error);
