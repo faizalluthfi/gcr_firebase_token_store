@@ -13,3 +13,8 @@ gcloud run deploy gcr-firebase-token-store \
     --region $REGION \
     --service-account $SERVICE_ACCOUNT
 ```
+
+Remember to adjust the following environment variables:
+- GOOGLE_CLOUD_PROJECT, the variable is automatically set in cloud shell and compute engine
+- REGION
+- SERVICE_ACCOUNT
